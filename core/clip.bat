@@ -18,7 +18,7 @@ echo.
 echo ============== MENU ==============
 echo.
 echo 1. 다운로드 시작
-echo 2. 주소 및 시간 입력
+echo 2. 다운로드 주소 및 클립 시간 입력
 echo.
 echo 0. 돌아가기
 echo.
@@ -40,14 +40,14 @@ if "%input1%" == "Q" goto :EOF
 cls
 
 echo.
-echo 시작 시간 입력 (형식 0:00:00 / q 입력 시 취소)
+echo 클립을 따기 시작할 시간 입력 (형식 0:00:00 / q 입력 시 취소)
 set /p "input2=> "
 if "%input2%" == "q" goto :EOF
 if "%input2%" == "Q" goto :EOF
 cls
 
 echo.
-echo 종료 시간 입력 (형식 0:00:00 / q 입력 시 취소)
+echo 클립 따기를 끝낼 종료 시간 입력 (형식 0:00:00 / q 입력 시 취소)
 set /p "input3=> "
 if "%input3%" == "q" goto :EOF
 if "%input3%" == "Q" goto :EOF
