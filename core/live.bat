@@ -22,10 +22,11 @@ echo 스레드수: %threadcount%
 echo.
 echo ============== MENU ==============
 echo.
-echo 1. 라이브 주소 입력
-echo 2. 쿠키 정리
-echo 3. 시스템 종료 예약
-echo 9. 다운로드 시작
+echo 1. 다운로드 시작
+echo 2. 라이브 주소 입력
+echo 3. 쿠키 정리
+echo 4. 시스템 종료 예약
+echo 5. 스레드 수 설정
 echo.
 echo 0. 돌아가기
 echo.
@@ -33,11 +34,11 @@ echo ==================================
 set /p "sel=> "
 
 cls
-if %sel% equ 1 call :INPUT_TARGET
-if %sel% equ 2 call :SET_COOKIECLEAR
-if %sel% equ 3 call :SET_SHUTDOWN
-if %sel% equ 4 call :SET_THREAD
-if %sel% equ 9 call :RUN_YTARCHIVE
+if %sel% equ 1 call :RUN_YTARCHIVE
+if %sel% equ 2 call :INPUT_TARGET
+if %sel% equ 3 call :SET_COOKIECLEAR
+if %sel% equ 4 call :SET_SHUTDOWN
+if %sel% equ 5 call :SET_THREAD
 if %sel% equ 0 call launcher.bat
 goto MENU
 
