@@ -1,3 +1,6 @@
+@echo off
+chcp 65001 > nul
+
 :FFMPEG
 cls
 echo.

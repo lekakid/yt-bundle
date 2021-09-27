@@ -1,3 +1,6 @@
+@echo off
+chcp 65001 > nul
+
 set url=NONE
 set cookie=YES
 set shutdown=NO

@@ -1,3 +1,6 @@
+@echo off
+chcp 65001 > nul
+
 set type=live
 set url=NONE
 set shutdown=NO

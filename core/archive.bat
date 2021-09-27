@@ -1,3 +1,6 @@
+@echo off
+chcp 65001 > nul
+
 set cookie=YES
 set shutdown=NO
 set audioonly=NO
