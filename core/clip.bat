@@ -31,34 +31,28 @@ goto MENU
 :INPUT_URL
 echo.
 echo 클립을 딸 아카이브의 주소 입력 (q 입력 시 취소)
-set /p "input=> "
-if "%input%" == "q" goto :EOF
-if "%input%" == "Q" goto :EOF
+set /p "input1=> "
+if "%input1%" == "q" goto :EOF
+if "%input1%" == "Q" goto :EOF
 cls
-goto INPUT_STARTTIME
 
-:INPUT_STARTTIME
 echo.
 echo 시작 시간 입력 (형식 0:00:00 / q 입력 시 취소)
 set /p "input2=> "
 if "%input2%" == "q" goto :EOF
 if "%input2%" == "Q" goto :EOF
 cls
-goto INPUT_ENDTIME
 
-:INPUT_ENDTIME
 echo.
 echo 종료 시간 입력 (형식 0:00:00 / q 입력 시 취소)
 set /p "input3=> "
 if "%input3%" == "q" goto :EOF
 if "%input3%" == "Q" goto :EOF
 cls
-goto INPUT_CONFIRM
 
-:INPUT_CONFIRM
-set url=%input%
-set start=%input2%
-set end=%input3%
+if "%input1%" neq "" set url=%input1%
+if "%input2%" neq "" set start=%input2%
+if "%input3%" neq "" set end=%input3%
 goto :EOF
 
 :RUN_YOUTUBE_DL
